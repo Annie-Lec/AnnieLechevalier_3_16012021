@@ -11,13 +11,61 @@
 
         <!-- Feuilles de Styles lien vers css-->
         <script src="https://kit.fontawesome.com/1e22565bce.js" crossorigin="anonymous"></script>
-        <!--<link rel="stylesheet" type="text/css" href="css/style.css" />-->
+        <link rel="stylesheet" type="text/css" href="css/styles.min.css" />
     </head>
     <!-- contenu du site  -->
     <body>
         <!-- beginning header -->
-        <header>
+        <header class="main-header">
+            <!--Logo tout en haut et en dessous un input de recherche-->
+            <a href="index.html"><img src="images/logo/ohmyfood.png" alt="logo OhmyFood" height="20"></a>
+                                                                                                                                            </header>
 
-        </header>
+        <section class="presentation">
+            <!--  localisation des restaurants -->
+            <div class="localisation">
+                <div class="puceNavig">
+                    <!-- le i dans un label qui va pointer vers search de l input-->
+                    <label for="search">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </label>
+                </div>
+                <div class="inputVille">
+                    <input type="text" placeholder="Paris, Belleville" id="search"/>
+                </div>
+            </div>
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <button class="btn btn--gradient" type="button">
+                    Explorer nos restaurants
+            </button>
+
+            
+        </section>
+        <!-- Fin section présentation-->
+
+        <section class="fonctionnement">
+            
+                <button class="btn"><div class="etape"><span class="numEtape">1</span><i class="fas fa-mobile-alt"></i> Choississez un restaurant</div></button><br />
+            
+            
+                <button class="btn"><div class="etape"><span class="numEtape">2</span><i class="fas fa-bars"></i> Composez votre menu</div></button><br />
+            
+            
+                <button class="btn"> <div class="etape"><span class="numEtape">3</span><i class="fas fa-home"></i> Dégustez au restaurant</div></button><br />
+            
+
+        </section>
+        <!--fin de fonctionnement -->
+
+        <section class="restaurants">
+
+        </section>
+
+
+
+        <footer>
+
+        </footer>
     </body>
 </html>

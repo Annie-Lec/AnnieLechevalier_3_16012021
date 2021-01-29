@@ -1,0 +1,82 @@
+html{
+    font-size: $font-size-default;
+    h1{
+        font-family: $font-police_titre, sans-serif ;
+    }
+
+    body{
+        font-size: 1rem;
+        margin: 0;
+
+        header{
+            text-align: center;
+            padding-top: 10px;
+        }
+        p{
+            font-family: $font-police-text, Sans-serif;
+        }
+        .presentation{
+            .localisation{
+                background-color: yellowgreen;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .puceNavig{
+                    font-size: 0.7rem;
+                }
+                .inputVille{
+                    font-size: 10px;
+                    background-color: inherit;
+                    border-style: hidden;
+                }
+            
+            }
+            .btn{
+                border-radius: var(--btn-corner, 20px);
+                background:  #99E2D0;
+                color: var(--btn-color, #fff);
+                padding: var(--btn-padding, 10px);
+                margin-left: 0;
+                &--gradient{
+                    background: linear-gradient(to right, transparent, $color-primaire);
+                    /*background : red;*/
+                }
+            }
+
+        }
+        .fonctionnement{
+            margin-left: 10px;
+                .btn{
+                    
+                    box-shadow: 2px 2px 1px lightgray;
+                    background:  #99E2D0;
+                    color:black;
+                    padding:  15px;
+                    
+                    width: 90%;
+                    margin :10px;
+                    .etape{
+                        
+                       
+                        width: 70%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding-left: 0;
+
+                        .numEtape{
+                            border-radius: 20px;
+                            background:  $color-primaire;
+                            color: white;
+                            margin: -25px;
+                            padding: 5px;
+                            width: 15px;
+                        }
+                    }
+                }
+        }
+    }
+}
