@@ -1,0 +1,42 @@
+/*section Fonctionnement **********************************************************/
+.fonctionnement{
+    margin-left: 10px;
+
+        .btn{
+            border-radius: 20px;
+            box-shadow: 2px 2px 1px lightgray;
+            background: $color-fond-input;
+            /*color: $color-primaire;*/
+            padding-left:  15px;
+            border: hidden;
+            
+            width: 80%;
+            margin :15px;
+            
+            .etape{ 
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 0;
+                padding-bottom: 5px;
+                padding-top: 5px;
+
+                .numEtape{
+                    border-radius: 20px;
+                    background:  $color-primaire;
+                    color: white;
+                    margin: -25px;
+                    padding: 3px;
+                    width: 15px;
+                    text-align: center;
+                    font-size: 10px;
+                }
+                .fas{
+                    padding-left: 25px;
+                    
+                }
+            }
+        }
+    
+}/* fin fonctionnement*/

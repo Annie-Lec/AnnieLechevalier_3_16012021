@@ -1,0 +1,45 @@
+.presentation{
+    /*Tous les éléments de Présentation seront alignés au centre de l ecran*/
+    text-align: center;
+    padding-bottom: 30px;
+    background-color: $color-fond-btn;
+
+    .localisation{
+        background-color: $color-fond-input;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0px -2px 1px lightgrey;
+
+        .puceNavig{
+            padding-left: 55px;                
+            label{
+                font-size: 0.7rem;
+                padding-right: 10px;
+            }
+            input{
+                /*on enlève la couleur blanche par défaut des zones de saisie et 
+                 on efface la bordure */
+                background-color: transparent;
+                font-size: 11px;
+                font-weight: bold;
+                border: none;
+            }
+        }
+    }
+    p{
+        padding-right: 40px;
+        padding-left:  40px;
+    }
+    
+    .lienRestaurant{
+        font-size: 11px;
+        display: inline-block;
+        position: relative;
+        border-radius: 20px;
+        width: fit-content;
+        color:  #fff;
+        padding: 12px;
+        background: linear-gradient(to bottom, $color-secondaire, $color-primaire);
+    }
+
+} /* fin section présentation *****************************************************/
