@@ -35,13 +35,8 @@ html{
             font-size: 11px;
         }
            
+        @import "header";
         
-        header{
-            text-align: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
         @import "presentation";
 
         @import "fonctionnement";
@@ -59,6 +54,24 @@ html{
             }
 
             .listeDesRestaurants{
+                @include respond('lg') {
+                    /*les restaurants sont rangés en 4 colonnes de même largeur sur tt l ecran*/
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    width: 100%;
+                }
+                @include respond('xl') {
+                    /*les restaurants sont rangés en 4 colonnes de même largeur sur tt l ecran*/
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    width: 100%;
+                }
+                @include respond('md') {
+                    /*les restaurants sont rangés en 2 colonnes de même largeur sur tte tablette*/
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    width: 100%;
+                }
                
                 .detailResto{
                     /*chaque bloc  va contenir une image, un titre (nom du restaurant en h2), la localisation et un coeur*/
@@ -70,7 +83,7 @@ html{
                     box-shadow: 2px 2px 1px lightgray;
                     /*on écarte chaque bloque de 10px les uns des autres*/
                     margin: 10px;
-                    cursor: pointer;
+                    
                 
 
                     .vignetteImage{
@@ -78,6 +91,7 @@ html{
                         overflow: hidden;
                         border-radius: 20px 20px 0 ;
                         width: auto;
+                        cursor: pointer;
                         
                         .photoResto{
                             display: block;
@@ -88,6 +102,7 @@ html{
                             object-fit: cover;
                         }
                     }
+
                     /*Informations sous la photo en 2 parties : nom / localisation ET Coeur */
                     .infoResto{
                         width: auto;
@@ -106,25 +121,39 @@ html{
                         }
 
                         .coeurResto{
+                            display: flex;
+                            justify-content: center;
                             padding-right: 15px;
+                            cursor: pointer;
                             align-self: center;
-                            
-                            .fa-heart{
-                                color: blue;
-                                :hover{
-                                    color: red;
-                                    background:$color-primaire;
-                                }
+                            position: relative;
+                                                        
+                            .far.fa-heart{
+                               display: block;   
+                               position: absolute;   
+                               color: red;
                             }
-                        }
 
-                    }
+                            .fas.fa-heart{     
+                                opacity: 0;
+                                color: blue;
+                                position: absolute;
+                            }
+                            /* au survol... effet sur le coeur ...... */
+                            .fas.fa-heart:hover {
+                                display: block;
+                                opacity: 1;
+                            }
 
-                    
-                }
+                            .far.fa-heart:hover {
+                                display: none;
+                            }
+                        } /*fin coeur*/
+                    } /* fin info sous la photo */
+                } /* fin detail restaurant */
 
-            }
-        }
+            } /* fin Liste de l ensmble des Resto */
+        } /*fin restaurants */
 
         footer{
             padding-top :5px;
@@ -143,7 +172,7 @@ html{
             p{
                 font-size: 12px;
             }
-        }
+        } /*fin footer */
 
 
     } /*fin body*/

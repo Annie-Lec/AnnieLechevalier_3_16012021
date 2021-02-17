@@ -9,9 +9,21 @@
             /*color: $color-primaire;*/
             padding-left:  15px;
             border: hidden;
-            
-            width: 80%;
+            width: 60%;
             margin :15px;
+
+            @include respond('md') {
+                width: 40%;
+            }
+            @include respond('lg') {
+                width: 30%;
+            }
+            @include respond('xl') {
+                width: 20%;
+            }
+            
+
+            
             
             .etape{ 
                 width: 70%;
@@ -21,6 +33,7 @@
                 padding-left: 0;
                 padding-bottom: 5px;
                 padding-top: 5px;
+                
 
                 .numEtape{
                     border-radius: 20px;
