@@ -1,0 +1,22 @@
+footer{
+    padding-top :5px;
+    padding-bottom :5px;
+    padding-left: 10px;
+
+    color: $color-font-white;
+    background-color: $color-fond-footer;
+    h3{
+        font-family: $font-police-titre;
+        font-size: 15px;
+        font-style: oblique;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    a{
+        color: $color-font-white;
+        text-decoration: none;
+    }
+    p{
+        font-size: 12px;
+    }
+} /*fin footer */

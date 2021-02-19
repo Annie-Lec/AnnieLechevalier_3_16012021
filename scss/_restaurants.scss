@@ -1,0 +1,111 @@
+/*section Restaurant ***********************************************/
+.restaurants{
+           
+    background-color: $color-fond-input;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+
+    h2{
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    #listeDesRestaurants{
+        @include respond('sm') {
+            /*les restaurants sont rangés en 2 colonnes de même largeur sur tte tablette*/
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
+
+        @include respond('lg') {
+            /*les restaurants sont rangés en 4 colonnes de même largeur sur tt l ecran*/
+            
+            grid-template-columns: repeat(4, 1fr);
+            
+        }
+        
+       
+       
+        .detailResto{
+            /*chaque bloc  va contenir une image, un titre (nom du restaurant en h2), la localisation et un coeur*/
+            border: 5px;
+            background-color: white;
+            /*les coins du container ne sont pas à angle droit mais un peu arrondis*/
+            border-radius: 20px;
+            /*une légère ombre portée */
+            box-shadow: 2px 2px 1px lightgray;
+            /*on écarte chaque bloque de 10px les uns des autres*/
+            margin: 10px;
+            
+        
+
+            .vignetteImage{
+                /*les éléments contenus dans vignette image (les children: les images ici) ne déborderont pas du cadre quand on va faire la transition*/
+                overflow: hidden;
+                border-radius: 20px 20px 0 ;
+                width: auto;
+                cursor: pointer;
+                
+                .photoResto{
+                    display: block;
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 20px 20px 0 0;
+                    /*l'image couvre l'espace (zoom) demandé avec height et width : ne se déforme pas*/
+                    object-fit: cover;
+                }
+            }
+
+            /*Informations sous la photo en 2 parties : nom / localisation ET Coeur */
+            .infoResto{
+                width: auto;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .texteResto{
+                    padding-left: 10px;
+                    h3{
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        margin-top: 0;
+                    }
+                }
+
+                .coeurResto{
+                    display: flex;
+                    justify-content: center;
+                    padding-right: 15px;
+                    cursor: pointer;
+                    align-self: center;
+                    position: relative;
+                                                
+                    .far.fa-heart{
+                       display: block;   
+                       position: absolute;   
+                       color: red;
+                    }
+
+                    .fas.fa-heart{     
+                        opacity: 0;
+                        color: blue;
+                        position: absolute;
+                    }
+                    /* au survol... effet sur le coeur ...... */
+                    .fas.fa-heart:hover {
+                        display: block;
+                        opacity: 1;
+                    }
+
+                    .far.fa-heart:hover {
+                        display: none;
+                    }
+                } /*fin coeur*/
+            } /* fin info sous la photo */
+        } /* fin detail restaurant */
+
+    } /* fin Liste de l ensmble des Resto */
+} /*fin restaurants */

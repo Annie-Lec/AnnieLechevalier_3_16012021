@@ -34,9 +34,9 @@
             </div>
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-            <div class="lienRestaurant">
-                    Explorer nos restaurants
-            </div>
+            <btn class="lienRestaurant">
+                <a href="#listeDesRestaurants" >Explorer nos restaurants </a>
+            </btn>
 
             
         </section>
@@ -44,10 +44,10 @@
 
         <section class="fonctionnement">
             <h2> Fonctionnement </h2>
-            
+            <div class="ListeDesTaches">
                 <div class="btn">
+                    <span class="numEtape">1</span>
                     <div class="etape">
-                        <span class="numEtape">1</span>
                         <i class="fas fa-mobile-alt"></i> 
                         <p> Choississez un restaurant </p>
                     </div>
@@ -55,8 +55,8 @@
             
             
                 <div class="btn">
+                    <span class="numEtape">2</span>
                     <div class="etape">
-                        <span class="numEtape">2</span>
                         <i class="fas fa-bars"></i> 
                         <p> Composez votre menu</p>
                     </div>
@@ -64,20 +64,20 @@
             
             
                 <div class="btn"> 
+                    <span class="numEtape">3</span>
                     <div class="etape">
-                        <span class="numEtape">3</span>
                         <i class="fas fa-home"></i> 
                         <p> Dégustez au restaurant</p>
                     </div>
                 </div>
-            
+            </div> 
 
         </section>
         <!--fin de fonctionnement -->
 
         <section class="restaurants">
             <h2> Restaurants </h2>
-            <div class="listeDesRestaurants">
+            <div id="listeDesRestaurants">
                 <div class="detailResto">
                     <div class="vignetteImage">
                         <a href="la-palette-du-gout.html"><img class="photoResto" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du goût" /> </a>
@@ -150,14 +150,14 @@
 
         </section>
 
-
+        
 
         <footer>
             <h3>ohmyfood</h3>
-            <p><i class="fas fa-utensils"></i> Proposer un restaurant</p>
-            <p><i class="fas fa-handshake"> Devenir partenaire</i></p>
-            <p>Mentions légales</p>
-            <p>Contact</p>
+            <a href="#"><p><i class="fas fa-utensils"></i> Proposer un restaurant</p></a>
+            <a href="#"><p><i class="fas fa-handshake"></i> Devenir partenaire</p></a>
+            <a href="#"><p>Mentions légales</p></a>
+            <a href="#"><p>Contact</p></a>
         </footer>
     </body>
 </html>
