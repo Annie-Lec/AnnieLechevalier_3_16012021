@@ -75,35 +75,6 @@
                     }
                 }
 
-                .coeurResto{
-                    display: flex;
-                    justify-content: center;
-                    padding-right: 15px;
-                    cursor: pointer;
-                    align-self: center;
-                    position: relative;
-                                                
-                    .far.fa-heart{
-                       display: block;   
-                       position: absolute;   
-                       color: red;
-                    }
-
-                    .fas.fa-heart{     
-                        opacity: 0;
-                        color: blue;
-                        position: absolute;
-                    }
-                    /* au survol... effet sur le coeur ...... */
-                    .fas.fa-heart:hover {
-                        display: block;
-                        opacity: 1;
-                    }
-
-                    .far.fa-heart:hover {
-                        display: none;
-                    }
-                } /*fin coeur*/
             } /* fin info sous la photo */
         } /* fin detail restaurant */
 

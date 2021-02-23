@@ -1,0 +1,162 @@
+
+.imageMenuResto{
+    /*les éléments contenus dans vignette image (les children: les images ici) ne déborderont pas du cadre quand on va faire la transition*/
+    overflow: hidden;
+    width: auto;
+    
+    img{
+        /*display: block;*/
+        width: 100%;
+        
+        /*l'image couvre l'espace (zoom) demandé avec height et width : ne se déforme pas*/
+        object-fit: cover;
+    }
+}
+
+.menu{
+    background-color: $color-fond-btn2 ;
+    border-radius: 20px 20px 0 0;
+
+    /*La section menu vient légèrement se superposer sur la photo*/
+    transform: translateY(-20px);
+
+    padding-bottom: 30px;
+ 
+    .titre{
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        h1{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            font-family: font-police-titre;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+    
+    }
+    h3{
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+    .vignette{
+        height: $height-vignette;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-font-white ;
+        
+        width: 300px;
+
+        /*gestion de l'affichage de la liste des plats du menu*/
+        animation-duration: 3s;
+        animation-name: apparition;
+        margin: 10px;
+        
+        
+        .infoVignette{
+            padding: 5px;
+            display: flex;
+            /*texte et prix aux extrémités*/
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 5px;
+            width: 300px;
+            transition-duration: 1s;
+            .TextVignette{
+                margin-right: 5px;
+                                
+                h4{
+                    margin: 0;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    padding-left: 5px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    
+                }
+                p{
+                    margin: 0;
+                    padding-left: 5px;
+                }
+
+            }
+            
+            
+            .prixVignette{
+                /*le prix est calé en bas de la vignette*/
+                align-self: flex-end;
+            }
+        }/*fin infoVignette*/
+        
+
+        .checkVignette{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 0px;
+            border-radius: 0 20px 20px 0;
+            height: $height-vignette;
+            background-color: $color-fond-check;
+            transition-duration: 1s;
+            transition-property: width;
+            .fa{
+                color: $color-fond-btn;
+            }
+        }
+
+        
+    }
+    @keyframes apparition {
+        from {
+          margin-bottom: 30px;
+          opacity: 0.3;
+        }
+      
+        to {
+          margin-bottom: 10px;
+          opacity: 1;
+        }
+      }
+
+
+
+
+    .vignette:hover, .vignette:focus, .vignette:active{
+        
+        .infoVignette{
+            background-color: yellowgreen;
+            .TextVignette{
+                width: 150px;
+            }
+        }
+        .checkVignette{
+            width: 80px;
+        }
+        
+    }
+
+
+}
+.commander{
+    text-align: center;
+    margin-bottom: 30px;
+
+
+
+}
+
+
+
+
+
+    
+
+

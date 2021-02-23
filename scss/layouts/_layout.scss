@@ -2,11 +2,11 @@ html{
     font-size: $font-size-default;
     @font-face {
         font-family: 'Roboto';
-        src: url('../font/Roboto-Regular.ttf');
+        src: url('../../font/Roboto-Regular.ttf');
     }
     @font-face {
         font-family: 'Shrikhand';
-        src: url('../font/Shrikhand-Regular.ttf');
+        src: url('../../font/Shrikhand-Regular.ttf');
     }   
 
     body{
@@ -30,6 +30,8 @@ html{
             font-size: 12px;
             font-weight: bolder;
         }
+
+        
         
         p{
             font-size: 11px;
@@ -37,11 +39,11 @@ html{
            
         @import "header";
         
-        @import "presentation";
+        @import "../pages/presentation";
 
-        @import "fonctionnement";
+        @import "../pages/fonctionnement";
 
-        @import "restaurants";
+        @import "../pages/restaurants";
 
         @import "footer";
 

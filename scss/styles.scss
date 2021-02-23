@@ -1,4 +1,6 @@
-@import "variables";
-@import "responsive";
-@import "layout";
-@import "menu";
+@import "utils/variables";
+@import "utils/responsive";
+@import "components/button";
+@import "components/heart";
+@import "layouts/layout";
+@import "pages/menu";
