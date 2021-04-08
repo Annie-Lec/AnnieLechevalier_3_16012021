@@ -31,24 +31,6 @@
         padding-left:  40px;
     }
     
-    .lienRestaurant{
-        font-size: 11px;
-        display: inline-block;
-        position: relative;
-        border-radius: 20px;
-        width: fit-content;
-        padding: 12px;
-        background: linear-gradient(to bottom, $color-secondaire, $color-primaire);
-        cursor: pointer;
-        a{
-            color:  #fff;
-            text-decoration: none;
-            
-        }
-        
-    }
-    .lienRestaurant:hover{
-        box-shadow: 3px 2px 1px lightgrey;
-    }
+    
 
 } /* fin section présentation *****************************************************/

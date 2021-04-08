@@ -9,21 +9,45 @@
     .far.fa-heart{
        display: block;   
        position: absolute;   
-       color: red;
+       color: $color-primaire;
+       /*linear-gradient(to bottom, $color-secondaire, $color-primaire);*/
     }
+
 
     .fas.fa-heart{     
         opacity: 0;
-        color: blue;
+        color: $color-secondaire;
         position: absolute;
+        
+        
     }
     /* au survol... effet sur le coeur ...... */
     .fas.fa-heart:hover {
         display: block;
-        opacity: 1;
+        animation: battement 3s linear infinite; 
+        
     }
 
     .far.fa-heart:hover {
         display: none;
+    }
+
+    @keyframes battement {
+        0%{
+            opacity: 1;
+            color: $color-secondaire;
+        }
+        30%{
+            opacity: 0.5;
+            color: $color-primaire;
+        }
+        70%{
+            opacity: 0.7;
+            color: $color-secondaire;
+        }
+        100% {
+            opacity: 1;
+            color: $color-primaire;
+        }
     }
 }/*fin coeur*/

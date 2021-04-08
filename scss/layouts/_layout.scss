@@ -36,8 +36,11 @@ html{
         p{
             font-size: 11px;
         }
-           
-        @import "header";
+        
+
+        @import "../layouts/loader";
+
+        @import "../layouts/header";
         
         @import "../pages/presentation";
 

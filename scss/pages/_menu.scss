@@ -85,6 +85,9 @@
                 p{
                     margin: 0;
                     padding-left: 5px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
 
             }
@@ -107,6 +110,7 @@
             background-color: $color-fond-check;
             transition-duration: 1s;
             transition-property: width;
+            overflow: hidden;
             .fa{
                 color: $color-fond-btn;
             }
@@ -132,7 +136,6 @@
     .vignette:hover, .vignette:focus, .vignette:active{
         
         .infoVignette{
-            background-color: yellowgreen;
             .TextVignette{
                 width: 150px;
             }
