@@ -3,6 +3,7 @@
     /*les éléments contenus dans vignette image (les children: les images ici) ne déborderont pas du cadre quand on va faire la transition*/
     overflow: hidden;
     width: auto;
+    max-height: 350px;
     
     img{
         /*display: block;*/
@@ -43,6 +44,21 @@
         font-size: 12px;
         text-transform: uppercase;
         margin-left: 10px;
+    }
+    .rangeFormule{
+
+        @include respond('sm') {
+            display: grid;
+            grid-template-columns: repeat(2,1FR);
+            width: 100%;
+            
+        }
+        @include respond('lg') {
+            display: grid;
+            grid-template-columns: repeat(3,1FR);
+            width: 100%;
+            font-size: 16px;
+        }
     }
     .vignette{
         height: $height-vignette;

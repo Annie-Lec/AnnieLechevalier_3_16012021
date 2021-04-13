@@ -7,21 +7,20 @@
             display: grid;
             grid-template-columns: repeat(3,1FR);
         }
-
     }
-    
 
         .btn{
             display: flex;
             align-items: center;
             border-radius: 20px;
             box-shadow: 2px 2px 1px lightgray;
-            background: $color-fond-input;
-            /*color: $color-primaire;*/
+            background: $color-fond-btn2;
             padding-left:  15px;
             border: hidden;
             width: auto;
             margin :15px 10px;
+            transition: background 1s;
+            transition: box-shadow 2s;
 
             
 
@@ -40,8 +39,6 @@
             }
             
 
-            
-            
             .etape{ 
                 width: 100%;
                 display: flex;
@@ -52,8 +49,18 @@
                 
                 .fas{
                     margin-right: 10px;
+                    transition: color 1s;
                     
                 }
+            }
+
+        }
+        .btn:hover{
+            box-shadow: 2px 2px 1px grey;
+            background:  $color-fond-btn2-clair;
+            opacity: 0.9;
+            .fas{
+                color:  $color-primaire;
             }
         }
     
