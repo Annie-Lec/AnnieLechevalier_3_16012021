@@ -18,10 +18,11 @@
         opacity: 0;
         color: $color-secondaire;
         position: absolute;
+        transition: all 0.3s;
     }
     /* au survol du conteneur... effet sur le coeur ...... */
 
-    &:hover .fas.fa-heart:hover{
+    &:hover .fas.fa-heart{
         animation: battement 3s linear infinite; 
     }
     
