@@ -33,7 +33,7 @@
             margin-top: 10px;
             margin-bottom: 10px;
             margin-left: 0;
-            font-family: font-police-titre;
+            font-family: $font-police-titre;
             font-weight: bold;
             font-size: 18px;
         }
@@ -87,6 +87,8 @@
             transition-duration: 1s;
             .TextVignette{
                 margin-right: 5px;
+                width: 100%;
+                transition: all 1s;
                                 
                 h4{
                     margin: 0;
