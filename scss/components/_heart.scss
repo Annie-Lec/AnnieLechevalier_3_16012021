@@ -5,6 +5,7 @@
     cursor: pointer;
     align-self: center;
     position: relative;
+    transition: all 0.3s;
 
                                 
     .far.fa-heart{
@@ -18,7 +19,7 @@
         opacity: 0;
         color: $color-secondaire;
         position: absolute;
-        transition: all 0.3s;
+        transition: all 1s;
     }
     /* au survol du conteneur... effet sur le coeur ...... */
 
@@ -28,8 +29,8 @@
     
 
     @keyframes battement {
-        0%{
-            opacity: 0.4;
+        20%{
+            opacity: 0.3;
             color: $color-secondaire;
         }
         30%{
